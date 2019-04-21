@@ -41,7 +41,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func main() {
+func main1() {
 	h := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", h)) // 启动静态文件服务
 	http.HandleFunc("/login", login)                         //设置访问的路由
